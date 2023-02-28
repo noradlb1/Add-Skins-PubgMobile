@@ -1,0 +1,7 @@
+C:\Users\MONSTERMC\Desktop\New folder\Gorilla\obj\Debug\Gorilla.csproj.CoreCompileInputs.cache
+C:\Users\MONSTERMC\Desktop\New folder\Gorilla\bin\Debug\Gorilla.exe
+C:\Users\MONSTERMC\Desktop\New folder\Gorilla\bin\Debug\Gorilla.pdb
+C:\Users\MONSTERMC\Desktop\New folder\Gorilla\bin\Debug\Guna.UI2.dll
+C:\Users\MONSTERMC\Desktop\New folder\Gorilla\obj\Debug\Gorilla.csproj.CopyComplete
+C:\Users\MONSTERMC\Desktop\New folder\Gorilla\obj\Debug\Gorilla.exe
+C:\Users\MONSTERMC\Desktop\New folder\Gorilla\obj\Debug\Gorilla.pdb

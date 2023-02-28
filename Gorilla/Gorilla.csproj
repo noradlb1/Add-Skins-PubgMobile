@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F945318-8F58-460B-A0DA-DF42B9F35F3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gorilla</RootNamespace>
+    <AssemblyName>Gorilla</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Gorilla.ico</ApplicationIcon>
+    <StartupObject>ModPubg.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Memory">
+      <HintPath>..\..\Update_add_skin_m762\Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModPubg\Controls\backpackPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModPubg\Controls\weaponPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModPubg\encryption.cs" />
+    <Compile Include="ModPubg\fClass\functions.cs" />
+    <Compile Include="ModPubg\fControls\others.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModPubg\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModPubg\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModPubg\Form_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModPubg\Form_Alert.Designer.cs">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModPubg\List_Panel\setPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModPubg\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModPubg\mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModPubg\Program.cs" />
+    <Compile Include="ModPubg\Properties\Resources.cs" />
+    <Compile Include="ModPubg\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ModPubg\Controls\backpackPanel.resources" />
+    <EmbeddedResource Include="ModPubg\Controls\backpackPanel.resx">
+      <DependentUpon>backpackPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModPubg\Controls\weaponPanel.resources" />
+    <EmbeddedResource Include="ModPubg\Controls\weaponPanel.resx">
+      <DependentUpon>weaponPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModPubg\fControls\others.resources" />
+    <EmbeddedResource Include="ModPubg\fControls\others.resx">
+      <DependentUpon>others.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModPubg\Form_Alert.resources" />
+    <EmbeddedResource Include="ModPubg\List_Panel\setPanel.resources" />
+    <EmbeddedResource Include="ModPubg\List_Panel\setPanel.resx">
+      <DependentUpon>setPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModPubg\mainForm.resources" />
+    <EmbeddedResource Include="ModPubg\Properties\Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="ModPubg\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
