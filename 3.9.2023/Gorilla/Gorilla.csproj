@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{777A329C-E0A0-45E0-852C-B60683CA50FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gorilla</RootNamespace>
+    <AssemblyName>Gorilla</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Gorilla.ico</ApplicationIcon>
+    <StartupObject>ModPubg.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\Downloads\Mod_skin\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Memory">
+      <HintPath>..\..\..\Downloads\Mod_skin\Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="KeyAuth\DataContractAttribute.cs" />
+    <Compile Include="KeyAuth\DataMemberAttribute.cs" />
+    <Compile Include="ModPubg\api.cs" />
+    <Compile Include="ModPubg\Controls\backpackPanel.cs" />
+    <Compile Include="ModPubg\Controls\weaponPanel.cs" />
+    <Compile Include="ModPubg\encryption.cs" />
+    <Compile Include="ModPubg\fClass\functions.cs" />
+    <Compile Include="ModPubg\fControls\others.cs" />
+    <Compile Include="ModPubg\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModPubg\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModPubg\Form_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModPubg\Form_Alert.Designer.cs">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModPubg\json_wrapper.cs" />
+    <Compile Include="ModPubg\List_Panel\setPanel.cs" />
+    <Compile Include="ModPubg\loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModPubg\loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModPubg\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModPubg\mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModPubg\Program.cs" />
+    <Compile Include="ModPubg\Properties\Resources.cs" />
+    <Compile Include="ModPubg\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ModPubg\Controls\backpackPanel.resources" />
+    <EmbeddedResource Include="ModPubg\Controls\weaponPanel.resources" />
+    <EmbeddedResource Include="ModPubg\fControls\others.resources" />
+    <EmbeddedResource Include="ModPubg\Form_Alert.resources" />
+    <EmbeddedResource Include="ModPubg\List_Panel\setPanel.resources" />
+    <EmbeddedResource Include="ModPubg\loginForm.resources" />
+    <EmbeddedResource Include="ModPubg\mainForm.resources" />
+    <EmbeddedResource Include="ModPubg\Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="ModPubg\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

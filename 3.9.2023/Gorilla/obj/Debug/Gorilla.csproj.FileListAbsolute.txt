@@ -1,0 +1,2 @@
+C:\Users\MONSTERMC\Desktop\11111\Gorilla\obj\Debug\Gorilla.csproj.AssemblyReference.cache
+C:\Users\MONSTERMC\Desktop\11111\Gorilla\obj\Debug\Gorilla.csproj.CoreCompileInputs.cache
